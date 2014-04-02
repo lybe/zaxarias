@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<title>Z-Lift</title>
+
+<style>
+                *{
+                margin:0;
+                padding:0;
+                }
+
+
+    html{
+        width:100%;
+        height:100%;
+        }
+
+        body{
+        width:100%;
+        height:100%;
+        }
+
+            .header{
+            position:relative;
+            width:100%;
+            height:8%;
+			background:url(images/mpara.png);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+            }
+
+            .content{
+            position:relative;
+            width:100%;
+            height:79.2%;
+			background:url(images/info-page-bg.png);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+            }
+            .row1{
+			
+			position:fixed;
+			top: 22%;
+            width:100%;
+            height:97%;
+			overflow-y:scroll;
+            }
+            .footer{
+            position:relative;
+            width:100%;
+            height:13%;
+            }
+
+		a:link {color:#FFFFFF;}
+		a:active {color:#0000FF;}
+ </style>
+ 
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+ 
+<script>
+function goBack()
+  {
+  window.history.back()
+  }
+</script>
+
+<style type="text/css"> 
+
+a:link {color:#FFFFFF; text-decoration:none;}
+a:visited {color:#FFFFFF;}
+a:active {color:#FF0000;}
+
+</style>
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+$(document).ready(function(){
+  $("#button").click(function(){
+      $.post("http://www.z-lift.gr/mobileapp/info.php",
+          {
+           h_elevator:localStorage.asansercode
+          },
+          function(data,status){
+    //       alert(11); 
+          $("#apotelesma").html(data);
+          });
+        }
+      )
+})
+</script>
+</head>
+
+<body bgcolor="#000000">
+
+<div  class="header">
+<center>
+<table width="97%" border="0">
+  <tr>
+    <td><img src="images/back.png" style="border:none;" width="62" height="36" onclick="goBack()" align="left"/></td>
+    <td><img src="images/transparent-small.png" style="border:none;" width="99" height="40" /></td>
+    <td><a href="register.html"><img src="images/settings.png" style="border:none;" width="50" height="36" align="right" /></a></td>
+  </tr>
+</table>
+</center>
+</div>
+
+  <div  class="content"> 
+  
+   
+    <div  class="row1">
+    <div >
+<button id="button" style="margin-left:auto;margin-right:auto;display:block; height:38px; width:190px">Πληροφορίες Ανελκυστήρα</button>
+</div>
+<center> 
+<div id="apotelesma"></div>
+</center>	 
+    </div>
+    
+  </div>
+
+<div  class="footer">
+
+ <a href="index.html"><img src="images/home.png" style="border:none;" width="20%"/></a><a href="information.html"><img src="images/information.png" style="border:none;" width="20%"/></a><a href="fire.html"><img src="images/firedepartment.png" style="border:none;" width="20%" /></a><a href="efimeries.html"><img src="images/farma.png" style="border:none;" width="20%"/></a><a href="about.html"><img src="images/site.png" style="border:none;" width="20%"/></a> 
+</div>
+
+</body>
+</html>
+
+
+

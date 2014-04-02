@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<title>Z-lift</title>
+
+<style>
+                *{
+                margin:0;
+                padding:0;
+                }
+
+
+    html{
+        width:100%;
+        height:100%;
+        }
+
+        body{
+        width:100%;
+        height:100%;
+        }
+
+            .header{
+            position:relative;
+            width:100%;
+            height:8%;
+			background:url(images/mpara.png);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+            }
+
+            .content{
+            position:relative;
+            width:100%;
+            height:79.2%;
+			background:url(images/info-page-bg.png);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+            }
+            
+			.row1{
+			position:fixed;
+			top: 21%;
+			left:25px;
+  	  		width:100%;
+  			height:97%;
+			overflow-y:scroll;
+    		}
+    		.row2{
+			position:fixed;
+			top: 21%;
+			left:25px;
+    		width:100%;
+    		height:97%;
+			overflow-y:scroll;
+    		}
+    		.row3{
+			position:fixed;
+			top: 21%;
+			left:25px;
+    		width:100%;
+    		height:97%;
+			overflow-y:scroll;
+    		}
+            .footer{
+            position:relative;
+            width:100%;
+            height:13%;
+            }
+
+		a:link {color:#FFFFFF;}
+		a:active {color:#0000FF;}
+ </style>
+ 
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+
+
+<script> 
+$(document).ready(function(){
+
+  $("#fliptop1").click(function(){
+    $(".row1").slideToggle("slow");
+	$(".row2").slideUp("slow");
+	$(".row3").slideUp("slow");
+  });
+  
+  $("#fliptop2").click(function(){
+    $(".row2").slideToggle("slow");
+	$(".row1").slideUp("slow");
+	$(".row3").slideUp("slow");
+  });
+  
+ $("#fliptop3").click(function(){
+    $(".row3").slideToggle("slow");
+	$(".row2").slideUp("slow");
+	$(".row1").slideUp("slow");
+  });
+  
+});
+</script>
+ 
+<style type="text/css"> 
+
+a:link {color:#FFFFFF; text-decoration:none;}
+a:visited {color:#FFFFFF;}
+a:active {color:#FF0000;}
+
+.row3 {display: none;}
+.row2 {display: none;}
+
+#fliptop1
+{
+width:auto;	
+margin-left:auto;
+margin-right:auto;
+margin-top:auto;
+margin-bottom:auto;
+padding:1px;
+}
+
+
+#fliptop2
+{
+width:auto;		
+margin-left:auto;
+margin-right:auto;
+margin-top:auto;
+margin-bottom:auto;
+padding:1px;
+}
+
+#fliptop3
+{
+width:auto;
+margin-left:auto;
+margin-right:auto;
+margin-top:auto;
+margin-bottom:auto;
+padding:1px;
+}
+</style>
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<script>
+function validateForm1()
+{
+localStorage.odoscode = document.getElementById("odos").value;
+localStorage.nomoscode = document.getElementById("nomos").value;
+localStorage.citycode = document.getElementById("city").value;
+localStorage.asansercode = document.getElementById("asanser").value;
+
+if (localStorage.odoscode==null || localStorage.odoscode=="" || localStorage.nomoscode=="" || localStorage.nomoscode=="" || localStorage.citycode=="" || localStorage.citycode=="" || localStorage.asansercode=="" || localStorage.asansercode=="")
+  {
+    var redirect = confirm('Συμπληρώστε όλα τα στοιχεία του κτιρίου σας!');
+  }
+  else
+  {
+    $(".row2").slideToggle("slow");
+	$(".row1").slideUp("slow");
+  }
+
+  }
+</script>
+
+<script>
+function validateForm2()
+{
+localStorage.mynamecode = document.getElementById("myname").value;
+localStorage.mysurnamecode = document.getElementById("mysurname").value;
+localStorage.myagecode = document.getElementById("myage").value;
+localStorage.mydatacode = document.getElementById("mydata").value;
+
+if (localStorage.mynamecode==null || localStorage.mynamecode=="" || localStorage.mysurnamecode=="" || localStorage.mysurnamecode=="")
+  {
+    alert('Συμπληρώστε το ονοματεπώνυμό σας!');
+	
+  }
+  else
+  {
+    $(".row3").slideToggle("slow");
+	$(".row2").slideUp("slow");
+  }
+}
+</script>
+
+<script>
+function validateForm3()
+{
+localStorage.managernamecode = document.getElementById("managername").value;
+localStorage.managersurnamecode = document.getElementById("managersurname").value;
+localStorage.managermobilecode = document.getElementById("managermobile").value;
+
+window.location.href="index.html";
+}
+</script>
+
+
+
+</head>
+
+<body bgcolor="#000000">
+
+<div  class="header">
+<center>
+<table width="97%" border="0">
+  <tr>
+    <td><a href="index.html"><img src="images/back.png" style="border:none;" width="62" height="36" align="left"/></a></td>
+    <td><img src="images/transparent-small.png" style="border:none;" width="99" height="40" /></td>
+    <td><img src="images/settings.png" style="border:none;" width="50" height="36" align="right" /></td>
+  </tr>
+</table>
+</center>
+</div>
+
+  <div  class="content"> 
+  
+  <center>
+	<table>
+	<tr>
+    <td>
+    <div id="fliptop1"><img src="images/databuilding.png" width="80" height="37" /></a></div>
+    </td>
+    <td>
+	<div id="fliptop2"><img src="images/datapersonal.png" width="80" height="37" /></div>
+    </td>
+    <td>
+	<div id="fliptop3"><img src="images/datamanager.png" width="80" height="37" /></div>
+    </td>
+    </tr>
+    </table>
+</center>
+    
+  </div>
+  
+  <div  class="row1">
+  
+  <div >
+ 
+  <table>
+  	<tr>
+  	<td><input id="odos" type="text" size="40" placeholder="ΟΔΟΣ - ΑΡΙΘΜΟΣ" /></td>
+    </tr>
+	<tr>
+    <td><input id="nomos" type="text" size="40" placeholder="ΝΟΜΟΣ"/></td>
+    </tr>
+    <tr>
+    <td><input id="city" type="text" size="40" placeholder="ΠΟΛΗ"/></td>
+    </tr>
+    <tr>
+    <td><input id="asanser" type="text" size="40" placeholder="ΣΤΟΙΧΕΙΑ ΑΝΕΛΚΥΣΤΗΡΑ"/></td>
+    </tr>
+    <tr>
+    <td>
+    <input  id="button"  value="SAVE"  style="float:right; height:35px; width:100px" type="button"  onclick="validateForm1();"/>
+    </td>
+    </tr>
+  </table>
+
+
+  </div>
+  </div>
+  
+      <div  class="row2">
+
+         <div >
+		 
+         <table>
+         <tr>
+         <td><input id="myname" type="text" size="40" placeholder="ΟΝΟΜΑ"/></td>
+         </tr>
+         <tr>
+         <td><input id="mysurname" type="text" size="40" placeholder="ΕΠΩΝΥΜΟ"/></td>
+         </tr>
+         <tr>
+         <td><input id="myage" type="text" size="40" placeholder="ΗΛΙΚΙΑ"/></td>
+         </tr>
+         <tr>
+         <td><input id="mydata" type="text" size="40" placeholder="ΑΛΛΑ ΣΤΟΙΧΕΙΑ"/></td>
+         </tr>
+         <tr>
+         <td>
+		 <input  id="button2"  value="SAVE"  style="float:right; height:35px; width:100px" type="button"  onclick="validateForm2();"/>
+		 </td>
+         </tr>
+         </table>
+         
+	</div> 
+    
+  </div>
+  
+      <div  class="row3">
+
+         <div >
+         <form name="myForm3" onsubmit="return validateForm3()" >
+         <table>
+         <tr>
+         <td><input id="managername" type="text" size="40" placeholder="ΟΝΟΜΑ"/></td>
+         </tr>
+         <tr>
+         <td><input id="managersurname" type="text" size="40" placeholder="ΕΠΩΝΥΜΟ"/></td>
+         </tr>
+         <tr>
+         <td><input id="managermobile" type="text" size="40" placeholder="ΤΗΛΕΦΩΝΟ"/></td>
+         </tr>
+         <tr>
+         <td>
+		 <input  id="button3"  value="SAVE"  style="float:right; height:35px; width:100px" type="button"  onclick="validateForm3();"/>
+		 </td>
+         </tr>
+         </table>
+		</form>
+		</div> 
+
+<script>
+$(document).ready(function(){
+  $("#button").click(function(){
+      //alert(localStorage.odoscode);
+      $.post("http://www.z-lift.gr/mobileapp/registry.php",
+          {
+            h_street:localStorage.odoscode,
+            h_city:localStorage.citycode, 
+            h_area:localStorage.nomoscode, 
+            h_elevator:localStorage.asansercode, 
+            h_uname:localStorage.mynamecode,
+            h_usurname:localStorage.mysurnamecode, 
+            h_uage:localStorage.myagecode, 
+            h_unotes:localStorage.mydatacode, 
+            h_mname:localStorage.managernamecode, 
+            h_msurname:localStorage.managersurnamecode, 
+            h_mphone:localStorage.managermobilecode 
+          },
+          function(data,status){
+           alert(data); 
+          });
+        }
+      )
+})
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#button2").click(function(){
+      //alert(localStorage.odoscode);
+      $.post("http://www.z-lift.gr/mobileapp/registry.php",
+          {
+            h_street:localStorage.odoscode,
+            h_city:localStorage.citycode, 
+            h_area:localStorage.nomoscode, 
+            h_elevator:localStorage.asansercode, 
+            h_uname:localStorage.mynamecode,
+            h_usurname:localStorage.mysurnamecode, 
+            h_uage:localStorage.myagecode, 
+            h_unotes:localStorage.mydatacode, 
+            h_mname:localStorage.managernamecode, 
+            h_msurname:localStorage.managersurnamecode, 
+            h_mphone:localStorage.managermobilecode 
+          },
+          function(data,status){
+           alert(data); 
+          });
+        }
+      )
+})
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#button3").click(function(){
+      //alert(localStorage.odoscode);
+      $.post("http://www.z-lift.gr/mobileapp/registry.php",
+          {
+            h_street:localStorage.odoscode,
+            h_city:localStorage.citycode, 
+            h_area:localStorage.nomoscode, 
+            h_elevator:localStorage.asansercode, 
+            h_uname:localStorage.mynamecode,
+            h_usurname:localStorage.mysurnamecode, 
+            h_uage:localStorage.myagecode, 
+            h_unotes:localStorage.mydatacode, 
+            h_mname:localStorage.managernamecode, 
+            h_msurname:localStorage.managersurnamecode, 
+            h_mphone:localStorage.managermobilecode 
+          },
+          function(data,status){
+           alert(data); 
+          });
+        }
+      )
+})
+</script>
+
+        
+  </div>
+
+<div  class="footer">
+
+ <a href="index.html"><img src="images/home.png" style="border:none;" width="20%"/></a><a href="information.html"><img src="images/information.png" style="border:none;" width="20%"/></a><a href="fire.html"><img src="images/firedepartment.png" style="border:none;" width="20%" /></a><a href="efimeries.html"><img src="images/farma.png" style="border:none;" width="20%"/></a><a href="about.html"><img src="images/site.png" style="border:none;" width="20%"/></a> 
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	if (localStorage.odoscode==null)
+		{document.getElementById("odos").value ==""}
+	else
+		{document.getElementById("odos").value = localStorage.odoscode;}
+		
+	if (localStorage.nomoscode==null)
+		{document.getElementById("nomos").value ==""}
+	else
+		{document.getElementById("nomos").value = localStorage.nomoscode;}
+		
+	if (localStorage.citycode==null)
+		{document.getElementById("city").value ==""}
+	else
+		{document.getElementById("city").value = localStorage.citycode;}
+		
+	if (localStorage.asansercode==null)
+		{document.getElementById("asanser").value ==""}
+	else
+		{document.getElementById("asanser").value = localStorage.asansercode;}
+		
+	if (localStorage.mynamecode==null)
+		{document.getElementById("myname").value ==""}
+	else
+		{document.getElementById("myname").value = localStorage.mynamecode;}
+		
+	if (localStorage.mysurnamecode==null)
+		{document.getElementById("mysurname").value ==""}
+	else
+		{document.getElementById("mysurname").value = localStorage.mysurnamecode;}
+		
+	if (localStorage.myagecode==null)
+		{document.getElementById("myage").value ==""}
+	else
+		{document.getElementById("myage").value = localStorage.myagecode;}
+		
+	if (localStorage.mydatacode==null)
+		{document.getElementById("mydata").value ==""}
+	else
+		{document.getElementById("mydata").value = localStorage.mydatacode;}
+		
+	if (localStorage.managernamecode==null)
+		{document.getElementById("managername").value ==""}
+	else
+		{document.getElementById("managername").value = localStorage.managernamecode;}
+		
+	if (localStorage.managersurnamecode==null)
+		{document.getElementById("managersurname").value ==""}
+	else
+		{document.getElementById("managersurname").value = localStorage.managersurnamecode;}
+		
+	if (localStorage.managermobilecode==null)
+		{document.getElementById("managermobile").value ==""}
+	else
+		{document.getElementById("managermobile").value = localStorage.managermobilecode;}
+
+		
+}, false);
+</script>
+
+</body>
+</html>
+
+
+
